@@ -1,0 +1,81 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: 'Tajawal', sans-serif;
+  height: 100vh;
+  font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+}
+
+#hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(#bc4793), to(#d792bf));
+  background: linear-gradient(-180deg, #bc4793, #d792bf);
+  padding: 3rem;
+  color: white;
+}
+
+#hero h1 {
+  letter-spacing: 3px;
+}
+
+#hero p {
+  font-size: 1.3em;
+}
+
+#values {
+  padding: 5rem 3rem;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (max-width: 1000px) {
+  #values {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#values li {
+  margin: .3em auto;
+  min-width: 500px;
+  background-color: #fff;
+  font-size: 1.7em;
+  padding: 3rem;
+  -webkit-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  #values li {
+    min-width: 300px;
+  }
+  #values li i {
+    display: block !important;
+  }
+}
+
+#values li i {
+  margin: auto 0;
+  font-size: 3em;
+  display: inline-block;
+}
+
+#values li div {
+  margin: auto .5em;
+}
+/*# sourceMappingURL=style.css.map */

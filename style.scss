@@ -1,0 +1,73 @@
+$primary: #ab47bc;
+$secondary: #bc4793;
+
+* {
+    box-sizing: border-box;
+}
+
+@mixin responsive-text($min: 6, $max: 16) {
+    $max: $max * 1px;
+    font-size: calc(#{$max} + #{$min} * ((100vw - 320px) / 680));
+}
+
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    // background-color: #232323;
+    // color: white;
+    font-family: 'Tajawal', sans-serif;
+    height: 100vh;
+    @include responsive-text();
+}
+
+#hero {
+    background: linear-gradient(-180deg, $secondary, lighten($secondary, 20%));
+    padding: 3rem;
+    color: white;
+
+    h1 {
+        letter-spacing: 3px;
+    }
+
+    p {
+        font-size: 1.3em;
+    }
+}
+
+#values {
+    padding: 5rem 3rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+    }
+
+    li {
+        @media screen and (max-width:600px) {
+            min-width: 300px;
+            i {
+                display: block !important;
+            }
+        }
+        // text-align: center;
+        margin: .3em auto;
+        min-width: 500px;
+        background-color: #fff;
+        font-size: 1.7em;
+        padding: 3rem;
+        box-shadow: 0px 2px 5px 2px rgba(black, 0.1);
+        display: flex;
+        i {
+            // font-size: 4em;
+            margin: auto 0;
+            font-size: 3em;
+            display: inline-block;
+        }
+        div {
+            margin: auto .5em;
+        }
+    }
+}
