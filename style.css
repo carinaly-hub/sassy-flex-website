@@ -10563,10 +10563,10 @@ a.text-dark:hover, a.text-dark:focus {
 
 #values li {
   color: #863168;
-  -webkit-transition: color 1.5s,background-color 1.5s,-webkit-transform ease-in-out 1.5s;
-  transition: color 1.5s,background-color 1.5s,-webkit-transform ease-in-out 1.5s;
-  transition: transform ease-in-out 1.5s,color 1.5s,background-color 1.5s;
-  transition: transform ease-in-out 1.5s,color 1.5s,background-color 1.5s,-webkit-transform ease-in-out 1.5s;
+  -webkit-transition: color 1.5s, background-color 1.5s, -webkit-transform ease-in-out 1.5s;
+  transition: color 1.5s, background-color 1.5s, -webkit-transform ease-in-out 1.5s;
+  transition: transform ease-in-out 1.5s, color 1.5s, background-color 1.5s;
+  transition: transform ease-in-out 1.5s, color 1.5s, background-color 1.5s, -webkit-transform ease-in-out 1.5s;
 }
 
 #values li:hover {
@@ -10619,5 +10619,42 @@ nav ul li:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: white;
+}
+
+input[type=checkbox] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input[type=checkbox] + label {
+  background-color: #fff;
+  border: white 2px solid;
+  height: 16px;
+  width: 16px;
+  border-radius: 5px;
+  position: relative;
+}
+
+input[type=checkbox] + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
+          transform: translateX(-50%) translateY(-50%) scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  background-color: #bc4793;
+  width: 80%;
+  height: 80%;
+}
+
+input[type=checkbox]:checked + label::before {
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+          transform: translateX(-50%) translateY(-50%) scale(1);
 }
 /*# sourceMappingURL=style.css.map */
